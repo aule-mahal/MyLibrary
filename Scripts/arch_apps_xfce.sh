@@ -25,8 +25,8 @@ pacman --noconfirm -S atril
 
 #Internet
 pacman --noconfirm -S firefox
+pacman --noconfirm -S chromium
 pacman --noconfirm -S deluge
-pacman --noconfirm -S thuderbird
 
 #Graphics
 pacman --noconfirm -S gimp
@@ -41,6 +41,7 @@ pacman --noconfirm -S bpython2
 
 #media
 pacman --noconfirm -S audacious
+pacman --noconfirm -S audacity
 pacman --noconfirm -S vlc
 pacman --noconfirm -S cheese
 
