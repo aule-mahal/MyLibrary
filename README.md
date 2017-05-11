@@ -1,6 +1,4 @@
 # MyLibrary
-A set of general use ADTs, functions, methods and classes.
-
-FILE NAMING CONVETION
-	PREFIX_FILENAME.LANG
-	Example: S_MinHeap.c (Static MinHeap); D_MinHeap.c(Dynamic MinHeap)
+This contains a set of personal scripts and code libraries to make my life easier or done for fun.
+All code within this repository was written for my personal use, you may copy and modify it as you
+wish, but use it AT YOUR OWN RISK, I do not claim responsability for any damages they might cause.
