@@ -1,4 +1,5 @@
 #!/bin/bash
+#Script to 'manually' install Oracle Jave on Ubuntu-like systems
 JDK=$1
 tar -zxvf $JDK
 mkdir -p /opt/java
