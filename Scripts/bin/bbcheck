@@ -1,0 +1,3 @@
+#! /bin/bash
+# Check if nvidia gpu is ON or OFF
+cat /proc/acpi/bbswitch

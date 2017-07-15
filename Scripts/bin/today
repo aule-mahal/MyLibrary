@@ -1,0 +1,3 @@
+#! /bin/bash
+#Displays todays date
+date +"%A %B - %d/%m/%Y"
