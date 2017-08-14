@@ -11,7 +11,9 @@ pacman --noconfirm -S htop
 pacman --noconfirm -S pluma
 pacman --noconfirm -S engrampa
 pacman --noconfirm -S wine
+pacman --noconfirm -S winetricks
 pacman --noconfirm -S gufw
+pacman --noconfirm -S meld
 
 #java
 pacman --noconfirm -S jdk8-openjdk
@@ -22,6 +24,7 @@ pacman --noconfirm -S icedtea-web
 pacman --noconfirm -S libreoffice-fresh
 pacman --noconfirm -S calibre
 pacman --noconfirm -S atril
+pacman --noconfirm -S texmaker
 
 #Internet
 pacman --noconfirm -S firefox
@@ -31,6 +34,7 @@ pacman --noconfirm -S deluge
 #Graphics
 pacman --noconfirm -S gimp
 pacman --noconfirm -S inkscape
+pacman --noconfirm -S gpick
 
 #Development
 pacman --noconfirm -S netbeans
@@ -45,3 +49,10 @@ pacman --noconfirm -S audacity
 pacman --noconfirm -S vlc
 pacman --noconfirm -S cheese
 
+#QT styling stuff
+pacman --noconfirm -S qt5ct
+pacman --noconfirm -S qt-styleplugins
+
+#Gaming
+pacman --noconfirm -S playonlinux
+pacman --noconfirm -S steam
