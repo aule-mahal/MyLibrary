@@ -4,9 +4,16 @@
 # DOES NOT INCLUDE STUFF FROM THE AUR those will be added manually later
 # To be used AFTER a DE has been installed
 
+#Add new servers to pacman.conf
+#Sublime Text
+curl -O https://download.sublimetext.com/sublimehq-pub.gpg && sudo pacman-key --add sublimehq-pub.gpg && sudo pacman-key --lsign-key 8A8F901A && rm sublimehq-pub.gpg
+echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/dev/x86_64" | sudo tee -a /etc/pacman.conf
+pacman -Syu
+
 #Accessories
 pacman --noconfirm -S vim
-pacman --noconfirm -S terminator
+#pacman --noconfirm -S terminator
+pacman --noconfirm -S tmux
 pacman --noconfirm -S htop
 pacman --noconfirm -S pluma
 pacman --noconfirm -S engrampa
@@ -14,6 +21,8 @@ pacman --noconfirm -S wine
 pacman --noconfirm -S winetricks
 pacman --noconfirm -S gufw
 pacman --noconfirm -S meld
+pacman --noconfirm -S qemu
+pacman --noconfirm -S gparted
 
 #java
 pacman --noconfirm -S jdk8-openjdk
@@ -38,8 +47,7 @@ pacman --noconfirm -S gpick
 
 #Development
 pacman --noconfirm -S netbeans
-pacman --noconfirm -S atom
-pacman --noconfirm -S glade
+pacman --noconfirm -S sublime-text
 pacman --noconfirm -S bpython
 pacman --noconfirm -S bpython2
 
