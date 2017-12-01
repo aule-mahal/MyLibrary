@@ -1,4 +1,2 @@
 #! /bin/bash
-#Alias for festival speech synthetizer
-# takes string argument
 echo "$1" | festival --tts

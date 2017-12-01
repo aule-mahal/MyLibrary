@@ -1,0 +1,3 @@
+#! /bin/bash
+# Check available memory
+free -h
