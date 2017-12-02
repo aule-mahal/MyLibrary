@@ -3,6 +3,7 @@
 # This script installs my preferred suit of applications
 # DOES NOT INCLUDE STUFF FROM THE AUR those will be added manually later
 # To be used AFTER a DE has been installed
+# Run this thirdly
 
 DONE="Done."
 
@@ -28,6 +29,7 @@ pacman --noconfirm -S qemu
 pacman --noconfirm -S gparted
 pacman --noconfirm -S virtualbox
 pacman --noconfirm -S virtualbox-host-dkms
+pacman --noconfirm -S nmap
 echo $DONE
 
 #java
@@ -49,6 +51,7 @@ echo "Installing internet applications..."
 pacman --noconfirm -S firefox
 pacman --noconfirm -S chromium
 pacman --noconfirm -S deluge
+pacman --noconfirm -S curl
 echo $DONE
 
 #Graphics
