@@ -12,6 +12,7 @@ echo "Installing favored applications."
 #Add new servers to pacman.conf
 #Sublime Text
 echo "Adding sublimetext servers..."
+pacman --noconfirm -S curl
 curl -O https://download.sublimetext.com/sublimehq-pub.gpg && sudo pacman-key --add sublimehq-pub.gpg && sudo pacman-key --lsign-key 8A8F901A && rm sublimehq-pub.gpg
 echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/dev/x86_64" | sudo tee -a /etc/pacman.conf
 pacman -Syu
@@ -51,7 +52,6 @@ echo "Installing internet applications..."
 pacman --noconfirm -S firefox
 pacman --noconfirm -S chromium
 pacman --noconfirm -S deluge
-pacman --noconfirm -S curl
 echo $DONE
 
 #Graphics
