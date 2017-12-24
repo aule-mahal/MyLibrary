@@ -14,6 +14,11 @@ pacman -S pulseaudio
 pacman -S pulseaudio-alsa
 echo $DONE
 
+#Xorg
+echo "Installing xorg..."
+pacman -S xorg
+echo $DONE
+
 #Intel graphics driver
 echo "Installing intel graphics..."
 pacman -S mesa
@@ -21,13 +26,6 @@ pacman -S lib32-mesa
 pacman -S xf86-video-intel
 pacman -S mesa-demos
 echo $DONE
-
-#Xorg
-echo "Installing xorg..."
-pacman -S xorg-server
-pacman -S xorg
-echo $DONE
-
 
 #Nvidia stuff
 echo "Installing Nvidia drivers and bumblebee..."
@@ -58,6 +56,4 @@ echo $DONE
 echo "Installing networking accessories..."
 pacman -S samba
 echo $DONE
-
-
 
