@@ -57,3 +57,9 @@ echo "Installing networking accessories..."
 pacman -S samba
 echo $DONE
 
+# Utilities
+echo "Installing utilities..."
+pacman -S mlocate
+pacman -S xdg-user-dirs
+xdg-user-dirs
+
