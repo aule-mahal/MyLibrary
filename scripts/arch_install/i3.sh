@@ -13,6 +13,8 @@ if [$1 == "--no-config"]
 then
 	exit
 fi
+# Config X keyboard layout
+localectl set-x11-keymap br abnt2
 #TODO configs
 
 
