@@ -5,8 +5,11 @@ pacman -S i3
 pacman -S dmenu
 pacman -S termite
 
+# Install support apps
+pacman -S feh
+
 # Install fonts
-#TODO fonts
+pacman -S ttf-liberation noto-sans terminus-font ttf-dejavu ttf-hack ttf-inconsolata
 
 # Auto-copy dotfiles
 if [$1 == "--no-config"]
