@@ -98,6 +98,5 @@ echo $DONE
 
 #Gaming
 echo "Installing gaming apps..."
-pacman --noconfirm -S playonlinux
 pacman --noconfirm -S steam
 echo $DONE
