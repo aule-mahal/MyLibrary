@@ -33,8 +33,7 @@ pacman --noconfirm -S tmux
 pacman --noconfirm -S htop
 #pacman --noconfirm -S pluma
 #pacman --noconfirm -S engrampa
-pacman --noconfirm -S wine
-pacman --noconfirm -S winetricks
+pacman --noconfirm -S wine winetricks
 pacman --noconfirm -S gufw
 pacman --noconfirm -S meld
 pacman --noconfirm -S qemu
@@ -59,8 +58,7 @@ echo $DONE
 
 #Internet
 echo "Installing internet apps..."
-#pacman --noconfirm -S firefox
-pacman --noconfirm -S chromium
+pacman --noconfirm -S chromium opera firefox
 pacman --noconfirm -S deluge
 echo $DONE
 
@@ -75,11 +73,8 @@ echo $DONE
 echo "Installing development apps..."
 pacman --noconfirm -S netbeans
 pacman --noconfirm -S sublime-text
-pacman --noconfirm -S bpython
-pacman --noconfirm -S bpython2
-pacman --noconfirm -S arduino-avr-core
-pacman --noconfirm -S arduino-docs
-pacman --noconfirm -S arduino
+pacman --noconfirm -S bpython bpython2
+pacman --noconfirm -S arduino arduino-avr-core arduino-docs
 echo $DONE
 
 #media
@@ -92,11 +87,10 @@ echo $DONE
 
 #QT styling stuff
 echo "Installing QT Styling apps..."
-pacman --noconfirm -S qt5ct
-pacman --noconfirm -S qt-styleplugins
+pacman --noconfirm -S qt5ct qt-styleplugins
 echo $DONE
 
 #Gaming
 echo "Installing gaming apps..."
-pacman --noconfirm -S steam
+pacman --noconfirm -S steam ttf-liberation
 echo $DONE

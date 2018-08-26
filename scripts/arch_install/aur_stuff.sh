@@ -5,7 +5,7 @@
 yaourt -S --noconfirm ttf-meslo
 
 # chat
-yaourt -S --noconfirm discord
+#yaourt -S --noconfirm discord
 
 # utilities
 yaourt -S --noconfirm inxi
