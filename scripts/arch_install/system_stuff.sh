@@ -41,10 +41,10 @@ echo $DONE
 
 #Power management
 echo "Installing power management tools..."
-pacman -S thermald
-pacman -S i7z
-pacman -S cpupower
-systemctl enable thermald.service
+#pacman -S thermald
+#pacman -S i7z
+#pacman -S cpupower
+#systemctl enable thermald.service
 echo $DONE
 
 #Intel Microcode
