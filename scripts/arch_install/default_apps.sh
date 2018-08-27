@@ -20,7 +20,7 @@ echo $DONE
 
 #Accessories
 echo "Installing accessory applications..."
-pacman --noconfirm -S vim
+#pacman --noconfirm -S vim
 pacman --noconfirm -S htop
 pacman --noconfirm -S wine
 pacman --noconfirm -S winetricks
@@ -44,13 +44,13 @@ echo $DONE
 echo "Installing office applications..."
 pacman --noconfirm -S libreoffice-fresh
 pacman --noconfirm -S calibre
-pacman --noconfirm -S texmaker
+#pacman --noconfirm -S texmaker
+pacman --noconfirm -S gummi
 echo $DONE
 
 #Internet
 echo "Installing internet applications..."
-pacman --noconfirm -S firefox
-pacman --noconfirm -S chromium
+pacman --noconfirm -S firefox chromium opera
 pacman --noconfirm -S deluge
 echo $DONE
 
@@ -64,13 +64,9 @@ echo $DONE
 #Development
 echo "Installing development applications..."
 pacman --noconfirm -S python2
-pacman --noconfirm -S eclipse-java
 pacman --noconfirm -S sublime-text
-pacman --noconfirm -S bpython
-pacman --noconfirm -S bpython2
-pacman --noconfirm -S arduino
-pacman --noconfirm -S arduino-avr-core
-pacman --noconfirm -S arduino-docs
+pacman --noconfirm -S bpython bpython2
+pacman --noconfirm -S arduino arduino-avr-core arduino-docs
 echo $DONE
 
 
@@ -84,13 +80,10 @@ echo $DONE
 
 #QT styling stuff
 echo "Installing qt styling applications..."
-pacman --noconfirm -S qt5ct
-pacman --noconfirm -S qt-styleplugins
+pacman --noconfirm -S qt5ct qt-styleplugins
 echo $DONE
 
 #Gaming
 echo "Installing gaming & games..."
-pacman --noconfirm -S playonlinux
 pacman --noconfirm -S steam
-pacman --noconfirm -S dwarffortress
 echo $DONE
