@@ -1,0 +1,14 @@
+#! /bin/bash
+# List programs using the nvidia gpu
+
+fuser -v /dev/nvidiactl
+
+#Check if file exists(not working)
+#file="/dev/nvidiactl"
+
+#if [ -f $file ]
+#then
+#	fuser -v $file
+#else
+#	echo "The GPU is not being used by any applications"
+#fi

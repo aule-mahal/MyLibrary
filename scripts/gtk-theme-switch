@@ -1,0 +1,15 @@
+# /bin/bash
+# switch between Matcha-Dark-Sea and Matcha-Dark
+# needs work
+echo "Needs more work..."
+exit
+tema=$(gsettings get org.gnome.shell.extensions.user-theme name)
+if [ "$tema" == "Matcha-dark-sea" 	]; then
+	gsettings set org.gnome.shell.extensions.user-theme name "Matcha-sea"
+	gsettings set org.gnome.desktop.interface.gtk-theme name "Matcha-sea"
+	gsettings set org.gnome.desktop.interface.icon-theme name "Papirus-Light"
+else
+	gsettings set org.gnome.shell.extensions.user-theme name "Matcha-dark-sea"
+	gsettings set org.gnome.desktop.interface.gtk-theme name "Matcha-dark-sea"
+	gsettings set org.gnome.desktop.interface.icon-theme name "Papirus-Dark"
+fi

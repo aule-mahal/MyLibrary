@@ -1,0 +1,5 @@
+!bin/bash
+
+# Monitor temperatures every second
+
+watch -n 1 sensors

@@ -1,0 +1,5 @@
+#! /bin/bash
+
+#Change GNOME 3 GTK Theme
+
+gsettings set org.gnome.desktop.interface gtk-theme "$1"
