@@ -1,4 +1,0 @@
-#! /bin/bash
-
-#opens file in Atril pdf reader
-atril ${1} &

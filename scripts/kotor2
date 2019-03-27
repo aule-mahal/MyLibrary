@@ -1,2 +1,0 @@
-#!/bin/bash
-optirun wine ${HOME}/.wine/drive_c/GOG\ Games/Star\ Wars\ -\ KotOR2/swkotor2.exe

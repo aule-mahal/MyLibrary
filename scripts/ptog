@@ -1,3 +1,0 @@
-#! /bin/bash
-# Toggle pulseaudio mute/unmute
-pamixer -t

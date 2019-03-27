@@ -35,9 +35,9 @@ echo $DONE
 
 #java
 echo "Installing openjdk..."
-pacman --noconfirm -S jdk8-openjdk
-pacman --noconfirm -S java-openjfx
-pacman --noconfirm -S icedtea-web
+#pacman --noconfirm -S jdk8-openjdk
+#pacman --noconfirm -S java-openjfx
+#pacman --noconfirm -S icedtea-web
 echo $DONE
 
 #Office
@@ -50,8 +50,8 @@ echo $DONE
 
 #Internet
 echo "Installing internet applications..."
-pacman --noconfirm -S firefox chromium opera
-pacman --noconfirm -S deluge
+#pacman --noconfirm -S firefox chromium opera
+#pacman --noconfirm -S deluge
 echo $DONE
 
 #Graphics
@@ -85,5 +85,5 @@ echo $DONE
 
 #Gaming
 echo "Installing gaming & games..."
-pacman --noconfirm -S steam
+#pacman --noconfirm -S steam
 echo $DONE

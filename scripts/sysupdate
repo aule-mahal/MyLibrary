@@ -1,2 +1,0 @@
-# Full system update, including AUR
-yaourt --aur -Syu

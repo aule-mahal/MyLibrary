@@ -1,9 +1,0 @@
-#!/bin/bash
-
-if [ "$1" == "cpp" ]
-then
-	cp ~/.ycm_extra_confcpp.py ./.ycm_extra_conf.py
-elif [ "$1" == "c" ]
-then
-	cp ~/.ycm_extra_conf.py ./
-fi
