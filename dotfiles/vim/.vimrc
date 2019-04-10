@@ -29,8 +29,9 @@ Plugin 'Yggdroot/indentLine'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+
+""set bg=dark
 colorscheme solarized
-set bg=dark
 "filetype plugin indent on
 syntax on
 
@@ -42,11 +43,12 @@ set cursorline
 "highlight CursorLine cterm=bold ctermfg=236 ctermbg=10
 highlight CursorLineNr ctermfg=37
 ""highlight CursorLine cterm=bold
+set hlsearch
 set wrap
 
 " Set tab to 4 spaces
 set autoindent
-set noexpandtab
+""set noexpandtab
 set shiftwidth=4
 set tabstop=4
 
@@ -66,7 +68,7 @@ inoremap {;<CR> {<CR>};<ESC>O
 " Lightline Stuff
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+	  \'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
