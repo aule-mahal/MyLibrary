@@ -1,5 +1,5 @@
 filetype off                  " required
-
+set encoding=UTF-8
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -11,38 +11,30 @@ Plugin 'VundleVim/Vundle.vim'
 
 "Plugins
 Plugin 'itchyny/lightline.vim'
-"Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
-"Plugin 'jiangmiao/auto-pairs'
 Plugin 'pseewald/nerdtree-tagbar-combined'
 Plugin 'drmingdrmer/xptemplate'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'dfxyz/CandyPaper.vim'
 Plugin 'junegunn/goyo.vim'
-Plugin 'ryanoasis/vim-devicons'
 Plugin 'Yggdroot/indentLine'
+Plugin 'ARM9/arm-syntax-vim'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-
-""set bg=dark
-colorscheme solarized
-"filetype plugin indent on
+colorscheme elflord
 syntax on
 
-"colorscheme elflord
-"colorscheme phosphor
 set nu
 set cursorline
-"highlight CursorLine cterm=bold ctermbg=238
-"highlight CursorLine cterm=bold ctermfg=236 ctermbg=10
-highlight CursorLineNr ctermfg=37
-""highlight CursorLine cterm=bold
+highlight CursorLineNr ctermfg=48
+highlight CursorLine cterm=bold ctermbg=238 
 set hlsearch
 set wrap
 
@@ -52,23 +44,20 @@ set autoindent
 set shiftwidth=4
 set tabstop=4
 
-" Indentation guidelines
-"set listchars:tab:\|\ 
-"set list
-
 " Auto-close brackets
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+"
+"inoremap " ""<left>
+"inoremap ' ''<left>
+"inoremap ( ()<left>
+"inoremap [ []<left>
+"inoremap { {}<left>
+"inoremap {<CR> {<CR>}<ESC>O
+"inoremap {;<CR> {<CR>};<ESC>O
 
 " Lightline Stuff
 set laststatus=2
 let g:lightline = {
-	  \'colorscheme': 'solarized',
+	  \'colorscheme': 'Tomorrow_Night',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -85,14 +74,8 @@ let g:lightline = {
 " Autoclose preview window after completion
 let g:ycm_autoclose_preview_window_after_completion = 1
 
-":function DevMode()
-":MinimapToggle
-":ToggleNERDTreeAndTagbar
-":endfunction
-
 " Enter dev mode command (enable IDE-like plugins)
 nmap <F2> :ToggleNERDTreeAndTagbar<CR>
-"nmap <F2> :call DevMode()<CR>
 
 " Sudo write this
 cmap W! w !sudo tee % >/dev/null
@@ -107,12 +90,7 @@ map <F10> :make run<CR>
 " Reload vimrc without restarting
 :command Rld source ~/.vimrc
 
-
 " Interpret .ino files as cpp
 au BufRead,BufNewFile *.ino,*.pde set filetype=cpp
 
 let g:deoplete#enable_at_startup = 1
-
-" vim arduino
-"let g:arduino_dir = '/usr/share/local/arduino'
-"let "g:arduino_board"'arduino:avr:uno'                                                                                                                                                
