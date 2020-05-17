@@ -1,4 +1,4 @@
 #! /bin/bash
 # displays battery state and percentage
 
-upower -i /org/freedesktop/UPower/devices/battery_BAT1 | grep -E "state|to\ full|percentage"
+upower -i /org/freedesktop/UPower/devices/battery_BAT0  #| grep -E "state|to\ full|percentage"

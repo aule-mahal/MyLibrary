@@ -1,0 +1,32 @@
+#
+# ~/.bashrc.aliases
+#
+
+# User application macros
+alias steam-wine='env WINEPREFIX="/home/aulos/.wine" wine C:\\windows\\command\\start.exe /Unix /home/aulos/.wine/dosdevices/c:/ProgramData/Microsoft/Windows/Start\ Menu/Programs/Steam/Steam.lnk'
+#alias angband='angband -g'
+alias nmap='sudo nmap'
+alias vimconf='vim $HOME/.vimrc'
+alias ranger='source ranger'
+alias tupã="curl http://v2.wttr.in"
+alias bat="bat --theme Nord"
+
+# System 
+alias systemctl='sudo systemctl'
+alias se='ls /usr/bin | grep'
+alias ..='cd ..'
+alias quit='exit'
+alias ls='ls --color=auto'
+alias pacrepo='sudo reflector -l 20 -f 10 --save /etc/pacman.d/mirrorlist'
+alias pacman='sudo pacman'
+alias journalctl='sudo journalctl'
+alias pacu='sudo pacman -Syu --noconfirm'
+alias auru='yay -Syu --noconfirm'
+alias java8='/usr/lib/jvm/java-8-openjdk/bin/java'
+#alias gotop='gotop -c solarized'
+
+
+if [[ $LANG = '' ]]; then
+	export LANG=en_US.UTF-8
+fi
+

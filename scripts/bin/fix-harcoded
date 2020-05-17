@@ -1,0 +1,3 @@
+#! /bin/bash
+
+sudo -E hardcode-tray --conversion-tool RSVGConvert --size 22 --theme Papirus

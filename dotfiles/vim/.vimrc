@@ -1,4 +1,6 @@
 filetype off                  " required
+
+
 set encoding=UTF-8
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -17,16 +19,16 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'pseewald/nerdtree-tagbar-combined'
 Plugin 'drmingdrmer/xptemplate'
-Plugin 'junegunn/goyo.vim'
-Plugin 'Yggdroot/indentLine'
 Plugin 'ARM9/arm-syntax-vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'netsgnut/arctheme.vim'
 Plugin 'cocopon/pgmnt.vim'
-Plugin 'mmai/vim-zenmode'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'idanarye/vim-vebugger'
+Plugin 'stevearc/vim-arduino'
+Plugin 'jeffkreeftmeijer/vim-dim'
+Plugin 'agude/vim-eldar'
+Plugin 'NLKNguyen/papercolor-theme'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,15 +41,23 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
-colorscheme elflord
 syntax on
 
+set background=light
+"colorscheme matchama
+set termguicolors
+"colorscheme eldar
+colorscheme PaperColor 
+"set notermguicolors
 set nu
-set cursorline
-highlight CursorLineNr cterm=bold ctermfg=85
-highlight CursorLine cterm=bold ctermbg=238 
+highlight CursorLineNr cterm=bold 
+"set cursorline
+"highlight CursorLine ctermbg=237
 set hlsearch
 set wrap
+
+" tab indent lines
+set list lcs=tab:\|\ 
 
 " Set tab to 4 spaces
 set autoindent
@@ -55,40 +65,34 @@ set autoindent
 set shiftwidth=4
 set tabstop=4
 
-
-
-" Auto-close brackets
-"
-"inoremap " ""<left>
-"inoremap ' ''<left>
-"inoremap ( ()<left>
-"inoremap [ []<left>
-"inoremap { {}<left>
-"inoremap {<CR> {<CR>}<ESC>O
-"inoremap {;<CR> {<CR>};<ESC>O
-
 " Lightline Stuff
 set laststatus=2
 let g:lightline = {
-	  \'colorscheme': 'materia',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
-      \ },
-	  \ 'component': {
-      \   'lineinfo': "%{line('.') . '/' . line('$')}",
-      \ },
-	  \ }
+		\'colorscheme': 'matchama',
+		\ 'active': {
+		\   'left': [ [ 'mode', 'paste' ],
+		\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+		\ },
+		\ 'component_function': {
+		\   'gitbranch': 'fugitive#head'
+		\ },
+		\ 'component': {
+		\   'lineinfo': "%{line('.') . '/' . line('$')}",
+		\ },
+	\ }
 
-" YCM Options
-" Autoclose preview window after completion
-"let g:ycm_autoclose_preview_window_after_completion = 1
+
+" Open NERDTreeAndTagbar and open a terminal in bottom right
+function DevMode()
+	ToggleNERDTreeAndTagbar	
+	rightbelow term
+	res -11
+	wincmd k
+endfunction
 
 " Enter dev mode command (enable IDE-like plugins)
 nmap <F2> :ToggleNERDTreeAndTagbar<CR>
+nmap <F3> :call DevMode()<CR>
 
 " Use TAB to navigate CoC completion list
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -105,12 +109,8 @@ map <F10> :make run<CR>:cw
 " Reload vimrc without restarting
 :command Rld source ~/.vimrc
 
-" Interpret .ino files as cpp
-au BufRead,BufNewFile *.ino,*.pde set filetype=cpp
+" Arduino
+let g:arduino_dir='/usr/share/arduino'
 
 let g:deoplete#enable_at_startup = 1
 
- "Zenmode
-let g:zenmode_background = "dark"
-let g:zenmode_colorscheme = "elflord"
-"let g:zenmode_font ="Cousine 12"
